@@ -18,13 +18,10 @@ class MostraDadosActivity : AppCompatActivity() {
         val telefone = intent.getStringExtra(MainActivity.INFO_EXTRA_TELEFONE)
         val idade = intent.getIntExtra(MainActivity.INFO_EXTRA_IDADE, 0)
 
-        val textViewNome= findViewById<TextView>(R.id.textViewNome)
-        val textViewEmail= findViewById<TextView>(R.id.textViewEmail)
-        val textViewTelefone = findViewById<TextView>(R.id.textViewTelefone)
-        val textViewIdade= findViewById<TextView>(R.id.textViewIdade)
-        textViewNome.setText(nome)
-        textViewEmail.setText(email)
-        textViewTelefone.setText(telefone)
-        textViewIdade.setText(idade)
+        findViewById<TextView>(R.id.textViewNome).text = nome
+        findViewById<TextView>(R.id.textViewEmail).text = email
+        findViewById<TextView>(R.id.textViewTelefone).text = telefone
+        findViewById<TextView>(R.id.textViewIdade).text= idade.toString()
+
     }
 }
