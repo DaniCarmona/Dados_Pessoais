@@ -9,8 +9,10 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        const val INFO_EXTRA_NOME = "MENSAGEM"
-        const val INFO_EXTRA_EMAIL = "DATA"
+        const val INFO_EXTRA_NOME = "NOME"
+        const val INFO_EXTRA_EMAIL = "EMAIL"
+        const val INFO_EXTRA_TELEFONE = "TELEFONE"
+        const val INFO_EXTRA_IDADE = "IDADE"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun enviaDados(view: View) {
+    fun enviarDados(view: View) {
         val editTextNome= findViewById<EditText>(R.id.EditTextNome)
         val nome = editTextNome.text.toString()
         val editTextEmail= findViewById<EditText>(R.id.EditTextEmail)
@@ -37,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, MostraMensagemActivity::class.java).apply {
             putExtra(INFO_EXTRA_NOME, nome )
             putExtra(INFO_EXTRA_EMAIL, email)
+            putExtra(INFO_EXTRA_TELEFONE, telefone)
+            putExtra(INFO_EXTRA_IDADE, idade)
         }
 
 
