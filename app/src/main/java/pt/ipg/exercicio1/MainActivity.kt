@@ -27,23 +27,40 @@ class MainActivity : AppCompatActivity() {
         val email = editTextEmail.text.toString()
         val editTextTelefone = findViewById<EditText>(R.id.EditTextTelefone)
         val telefone = editTextTelefone.text.toString()
+        //Normalmente deve ser pedida a data de nascimento e não a idade
         val editTextIdade= findViewById<EditText>(R.id.EditTextIdade)
-        val idade = editTextIdade.text.toString()
+        val idade = editTextIdade.text.toString().toIntOrNull()
 
+        var dadosCorretos = true
 
-        /*if(mensagem.trim().isBlank()){
-            editTextMensagem.error = getString(R.string.mensagem_vazia)
-            return
-        }*/
-
-        val intent = Intent(this, MostraDadosActivity::class.java).apply {
-            putExtra(INFO_EXTRA_NOME, nome )
-            putExtra(INFO_EXTRA_EMAIL, email)
-            putExtra(INFO_EXTRA_TELEFONE, telefone)
-            putExtra(INFO_EXTRA_IDADE, idade)
+        if(nome.isBlank()){
+            editTextNome.error = "Por favor introduza o nome"
+            dadosCorretos = false
+        }
+        if(email.isBlank()){
+            editTextEmail.error = "Por favor introduza o email"
+            dadosCorretos = false
+        }
+        if(telefone.isBlank()){
+            editTextTelefone.error = "Por favor introduza o telefone"
+            dadosCorretos = false
+        }
+        if(idade == null ){
+            editTextIdade.error = "Por favor introduza uma idade valida"
+            dadosCorretos = false
         }
 
+        if(dadosCorretos) {
 
-        startActivity(intent)
+            val intent = Intent(this, MostraDadosActivity::class.java).apply {
+                putExtra(INFO_EXTRA_NOME, nome)
+                putExtra(INFO_EXTRA_EMAIL, email)
+                putExtra(INFO_EXTRA_TELEFONE, telefone)
+                putExtra(INFO_EXTRA_IDADE, idade)
+            }
+
+
+            startActivity(intent)
+        }
     }
 }
