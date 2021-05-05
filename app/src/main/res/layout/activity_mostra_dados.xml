@@ -21,7 +21,7 @@
         android:textColor="#673AB7" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -46,7 +46,7 @@
         android:textColor="#673AB7" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -70,7 +70,7 @@
         android:textColor="#673AB7" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textViewTelefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -94,7 +94,7 @@
         android:textColor="#673AB7" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewIdade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
