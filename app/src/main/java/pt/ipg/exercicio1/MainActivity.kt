@@ -34,19 +34,19 @@ class MainActivity : AppCompatActivity() {
         var dadosCorretos = true
 
         if(nome.isBlank()){
-            editTextNome.error = "Por favor introduza o nome"
+            editTextNome.error = getString(R.string.nome_obrigatorio)
             dadosCorretos = false
         }
         if(email.isBlank()){
-            editTextEmail.error = "Por favor introduza o email"
+            editTextEmail.error = getString(R.string.email_obrigatorio)
             dadosCorretos = false
         }
         if(telefone.isBlank()){
-            editTextTelefone.error = "Por favor introduza o telefone"
+            editTextTelefone.error = getString(R.string.telefone_obrigatorio)
             dadosCorretos = false
         }
         if(idade == null ){
-            editTextIdade.error = "Por favor introduza uma idade valida"
+            editTextIdade.error = getString(R.string.idade_obrigatoria)
             dadosCorretos = false
         }
 

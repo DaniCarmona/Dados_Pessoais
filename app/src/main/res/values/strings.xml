@@ -5,4 +5,8 @@
     <string name="telefone">Telefone</string>
     <string name="idade">Idade</string>
     <string name="enviar">Enviar</string>
+    <string name="nome_obrigatorio">Por favor introduza o nome</string>
+    <string name="email_obrigatorio">Por favor introduza o email</string>
+    <string name="telefone_obrigatorio">Por favor introduza o telefone</string>
+    <string name="idade_obrigatoria">Por favor introduza uma idade valida</string>
 </resources>
