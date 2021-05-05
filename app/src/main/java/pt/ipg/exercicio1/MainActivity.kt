@@ -10,7 +10,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     companion object {
         const val INFO_EXTRA_NOME = "MENSAGEM"
-        const val INFO_EXTRA_DATA = "DATA"
+        const val INFO_EXTRA_EMAIL = "DATA"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,14 +19,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun enviaDados(view: View) {
-        val textInputEditTextNome= findViewById<EditText>(R.id.EditTextNome)
-        val nome = textInputEditTextNome.text.toString()
-        val textInputEditTextEmail= findViewById<EditText>(R.id.EditTextEmail)
-        val email = textInputEditTextEmail.text.toString()
-        val textInputEditTextTelefone= findViewById<EditText>(R.id.EditTextTelefone)
-        val telefone = textInputEditTextNome.text.toString()
-        val textInputEditTextIdade= findViewById<EditText>(R.id.EditTextIdade)
-        val nome = textInputEditTextNome.text.toString()
+        val editTextNome= findViewById<EditText>(R.id.EditTextNome)
+        val nome = editTextNome.text.toString()
+        val editTextEmail= findViewById<EditText>(R.id.EditTextEmail)
+        val email = editTextEmail.text.toString()
+        val editTextTelefone = findViewById<EditText>(R.id.EditTextTelefone)
+        val telefone = editTextTelefone.text.toString()
+        val editTextIdade= findViewById<EditText>(R.id.EditTextIdade)
+        val idade = editTextIdade.text.toString()
 
 
         /*if(mensagem.trim().isBlank()){
@@ -42,5 +42,4 @@ class MainActivity : AppCompatActivity() {
 
         startActivity(intent)
     }
-    TextInputEditTextNome
 }
