@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             return
         }*/
 
-        val intent = Intent(this, MostraMensagemActivity::class.java).apply {
+        val intent = Intent(this, MostraDadosActivity::class.java).apply {
             putExtra(INFO_EXTRA_NOME, nome )
             putExtra(INFO_EXTRA_EMAIL, email)
             putExtra(INFO_EXTRA_TELEFONE, telefone)
